@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub</title>
+
+    <meta name="autor" content="none">
+    <meta name="description" content="description!">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1, minimum-scale=1">    
+    <!-- 뷰포트 처리 : 디바이스 가로 길이 그대로 사용, 최초 스케일, 기본 확대 축소 금지 -->
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">    
+    <!-- 최신 익스플로러로 랜더링 하도록 하는 메타태그 -->
+
+
+    <!-- og == Open Graph이며, 외부에 해당 정보를 제공 -->
+    <!-- http://ogp.me/ -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="GitHub">
+    <meta property="og:title" content="Build software better, together">
+    <meta property="og:description" content="GitHub clone coding / GitHub is where people build software. More than 31 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
+    <meta property="og:image" content="img/logo__github.png">
+    <meta property="og:url" content="https://github.com">
+
+    <!-- 동일하게 외부에 해당 정보를 제공, 트위터 관련 -->
+    <!-- https://developer.twitter.com/en/docs/tweets/optimize-with-cards/guides/getting-started.html -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:site" content="GitHub">
+    <meta property="twitter:title" content="Build software better, together">
+    <meta property="twitter:description" content="GitHub clone coding / GitHub is where people build software. More than 31 million people use GitHub to discover, fork, and contribute to over 100 million projects.">
+    <meta property="twitter:image" content="img/logo__github.png">
+    <meta property="twitter:url" content="https://github.com">
+    <!-- 위의 2가지 정보는 카카오 톡이나 링크 검색 시 나오는 작은 카드형태의 정보에 출력 -->
+
+
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"> -->
+    <!-- 윈도우용 아이콘인데, 생략해도 해당 index 위치에 favicon.ico가 존재한다면 자동으로 찾아 활용함 -->
+
+    <link rel="icon" href="./favicon.png">
+    <link rel="apple-touch-icon" href="./favicon.png">
+    <!-- 이는 스마트폰용 아이콘이 됨 -->
+
+    <!-- 리셋 -->
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <!-- css 관련 내용을 리셋 시키도록 css reset css를 호출 / 이후 우리가 적용시킬 내용보다 우선해서 나와야 함 -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+    <!-- 파일을 가져오지 않고 rest.css cdn 검색으로 링크를 가져올 수 있음 -->
+
+    <!-- 웹폰트 -->
+    <!-- 구글 폰트를 활용해 웹폰트를 가져와야 함 -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    
+</head>
+<body>
+    <div class="body__container">
+        <!-- 
+            BEM
+            CSS 작명규칙 
+
+            __ == 앞의 대상의 일부분이라는 의미 위의 경우, body의 일부분이라는 의미
+            -- == 앞의 대상의 상태를 의미, btn--success 등...
+            - == 일반적 작명 구분            
+        -->
+        
+        <div class="btn">hello</div>
+        <div class="btn btn--primary">primary</div>
+
+        <input type="text" class="input--text" placeholder="Search Github">
+        <!-- placeholder == 입력 창에 대한 힌트 -->
+        <input type="text" class="input--text" placeholder="Hello">
+        <input type="text" class="input--text" placeholder="Search">
+
+    </div>
+</body>
+</html>
