@@ -5,6 +5,10 @@
     color: #333;
 }
 
+a {
+    text-decoration: none;
+}
+
 .btn {
     height: 34px;
     background: #eee linear-gradient(to bottom, #fcfcfc, #eee);
@@ -18,6 +22,7 @@
     cursor: pointer;
     box-sizing: border-box;
     position: relative;
+    color: #333;
 }
 
 .btn:hover::before {
@@ -62,3 +67,242 @@ Vendor Prefix (브라우저 업체별 접두사)
 .input--text::-webkit-input-placeholder{ color: #cacaca;}
 .input--text::-ms-input-placeholder{color: #cacaca;}
 .input--text::-moz-input-placeholder{color: #cacaca;}
+
+/* FLOAT CLEARFIX */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;    
+}
+/* float 대상을 포함하는 부모요소를 대상들을 감쌀 수 있도록 하기위한 속성 부여 */
+
+.float--left {
+    float: left;
+}
+
+.float--right {
+    float: right;
+}
+
+
+/* SUMMARY */
+
+.summary {
+
+}
+.summary__title {
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 1.25;    
+    margin-bottom: 18px;
+}
+.summary__description {
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #767676;
+}
+
+/* SECTION & INNER */
+.section {
+    position: relative; 
+    /* absoulute를 활용하는 경우, relative에 걸리도록 section과 inner 부분에 걸어준다 */
+}
+.section .inner {
+    max-width: 980px;
+    margin: 0 auto; /*가운데 정렬(단 가로 사이즈가 정해져야 함)*/
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* 공통 부분들은 따로 작성해 반복 작성을 피하도록 함 */
+
+
+
+/* HEADER */
+
+header {
+    border-bottom: 1px solid rgba(0,0,0,0.75);
+    box-shadow: 0 0 5px rgba(0,0,0,.75);
+    background: #FFF;        
+}
+
+header .inner { 
+    height: 78px;    
+}
+
+    /* 좌측 메뉴 */
+header .menu-group {
+    display: flex;
+    align-items: center; /*수직 정렬*/
+    height: 100%;
+}
+
+header .logo {
+    margin-right: 10px;
+}
+
+header .logo a {
+    background: url("../img/logo.svg");
+    width: 32px;
+    height: 32px;
+    display: block;
+    /* a태그를 block으로 바꾸고 크기로 바꿔서 background 속성을 통해 표현    */
+    text-indent: -9999px;
+    /* 텍스트를 사라지게 하기위해 인덴트 활용 */
+}
+
+header .logo a:hover {
+    background: url("../img/logo_on.svg");
+}
+
+header .main-menu {
+    display: flex;
+}
+
+header .main-menu li a{
+    display: block;
+    padding: 10px;
+    /* display 모드를 block으로 바꾸고 마진이 아니라 페딩을 씀으로써]
+    선택이 쉽도록 바꿈 */
+    color: #3c4146;
+}
+
+header .main-menu li a:hover{
+    color: #4078c0;
+}
+
+    /* 우측 메뉴 */
+header .sign-group  {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+/* flex 관련 order을 통해 순서를 바꿈 */
+/* 숫자가 클수록 이후에 배치 됨 */
+header .btn-group {
+    order:2;
+    display: flex;
+}
+
+header .btn-group .sign-in {
+    margin-right: 4px;
+}
+
+#search-form {
+    order:1;
+    margin-right: 12px;
+}
+
+#search {
+    width: 160px;
+    font-size: 14px;    
+}
+header .sub-menu {
+    display: flex;    
+    margin-right: 10px;
+}
+
+#search + [type="submit"] {
+    display: none;
+}
+
+
+header .sub-menu li a{
+    padding: 8px;
+    display: block;
+    font-size: 13px;
+    color: #3c4146;
+}
+
+header .sub-menu li a:hover{
+    color: #4078c0;
+}
+
+
+/* VISUAL */
+
+.section--visual{
+    background: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: cover;    
+    /* 크기 사이즈에 관계없이 화면을 덮는 속성 */
+}
+
+.section--visual::before{
+    content: "";
+    position: absolute;
+    /* absolute를 사용 시 relativ postion을 가지는 대상이 있는지 확인해야 함 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.3);
+    /* 배경 이미지를 가상 선택자를 활용해 어둡게 처리함 */
+}
+
+.section--visual .inner {    
+    padding: 160px 0;
+    display: flex;
+}
+
+.section--visual .summary {
+    /*
+    flex-grow: 1;
+    flex-basis: 0; 
+    */
+    flex: 1;
+    /* flex의 배치를 위해 설정하는 부분 관련 내용 참고 ㄱ= */
+
+    margin-right: 90px;
+}
+
+.section .summary__title {
+    color: #FFF;
+    font-size: 54px;
+    text-shadow: 0 1px 1px rgba(0,0,0,.25), 
+                 0 1px 25px rgba(0,0,0,.75);
+}
+
+.section .summary__description {
+    color: #FFF;    
+    text-shadow: 0 1px 1px rgba(0,0,0,.25), 
+                 0 1px 25px rgba(0,0,0,.75);
+}
+
+#sign-form {
+    margin-top: 16px;
+    width: 340px;
+}
+
+#sign-form li {
+    margin-bottom: 17px;
+}
+
+#sign-form li:last-child {
+    margin-bottom: 0;
+}
+
+#sign-form .input--text {
+    width: 100%;
+    height: 40px;
+}
+
+#sign-form .caption {
+    font-size: 12px;   
+    margin-top: 5px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+    text-align: center;
+}
+
+#sign-form [type="submit"] {
+    width: 100%;
+    height: 62px;
+    font-size: 20px;
+    padding: 0 25px;
+    justify-content: center;
+    /* flex의 가로 정렬의 경우 justify-content를 활용해야한다. / 세로는 align-items: center */
+}

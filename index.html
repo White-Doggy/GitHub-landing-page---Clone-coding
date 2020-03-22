@@ -65,14 +65,97 @@
             - == 일반적 작명 구분            
         -->
         
+        <!--
         <div class="btn">hello</div>
         <div class="btn btn--primary">primary</div>
 
         <input type="text" class="input--text" placeholder="Search Github">
-        <!-- placeholder == 입력 창에 대한 힌트 -->
+        
+            placeholder == 입력 창에 대한 힌트 
         <input type="text" class="input--text" placeholder="Hello">
-        <input type="text" class="input--text" placeholder="Search">
+        <input type="text" class="input--text" placeholder="Search">    
+        -->
 
-    </div>
+        <!-- Header! -->
+        <header class="section">
+            <div class="inner clearfix">
+                <!-- 컨텐츠를 중간으로 몰기위한 영역 inner -->
+                
+                <!-- 좌측 메뉴 -->
+                <div class="menu-group float--left">
+                    <div class="logo">
+                        <a href="#">github</a>
+                        <!-- 텍스트는 화면에만 안나오게 해뒀다가 이미지 로드 실패시 텍스트로 사용 -->
+                    </div>
+                    <ul class="main-menu">
+                        <li><a href="#">Personal</a></li>
+                        <li><a href="#">Open source</a></li>
+                        <li><a href="#">Business</a></li>
+                        <li><a href="#">Explore</a></li>                                                
+                    </ul>                    
+                </div>
+                
+                <!-- 
+                우측 메뉴의 경우 반응형으로 살펴보면 순서가 반대인데,
+                이때 상, 하 기준으로 작성을 하고 수평 정렬을 수정하는 방식으로 처리해준다.
+                 -->
+                 
+                <div class="sign-group float--right">
+                    <div class="btn-group">
+                        <a href="#" class="btn sign-in">Sign in</a>
+                        <a href="#" class="btn btn--primary sign-up">Sing up</a>
+                    </div>
+                    <form id="search-form" method="POST"action="">
+                        <input type="text" id="search" class="input--text" placeholder="Search GitHub">
+                        
+                        <input type="submit" value="Submit"> 
+                        <!-- 실제는 submit 버튼이 없기 때문에 이는 css로 제거해줌 -->                        
+                    </form>
+                    <ul class="sub-menu">
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+            </div>            
+        </header>
+
+        <!-- VISUAL -->
+        <section class="section section--visual">
+                <div class="inner">
+
+                    <div class="summary">
+                        <div class="summary__title">How&nbsp;people build&nbsp;software</div>
+                        <!-- &nbsp; == 띄워쓰기이며, 단어사이에 넣음으로써 하나의 덩어리로 취급되도록 해 자연스럽게 줄바꿈 되도록 함 -->
+
+                        <div class="summary__description">                            
+                            Millions of developers use GitHub to build personal projects, support their businesses, and&nbsp;work together on open source technologies.
+                        </div>
+                        <!-- <br/>을 쓰지 않는 이유는, 반응형 웹 사용시 문제가 발생 할 수 있음 -->
+                    </div>
+
+                    <form id="sign-form" method="POST" action="">
+                        <ul>
+                            <li><input type="text" class="input--text" placeholder="Pick a username"></li>
+                            <li><input type="email" class="input--text" placeholder="Your email address"></li>
+                            <li><input type="password" class="input--text" placeholder="Create a password">
+                                <p class="caption">
+                                    Use at least one letter, one numeral, and seven characters.                                    
+                                </p>
+                            </li>
+                            <li>
+                                <button type="submit" class="btn btn--primary">Sign up for GitHub</button>
+                                <p class="caption">
+                                    By clicking "Sign up for GitHub", you agree to our terms of service and privacy policy. We'll occasionally send you account related emails.
+                                </p>
+                            </li>
+                        </ul>
+
+                    </form>
+
+                </div>
+        </section>
+
+    </div>    
 </body>
 </html>
