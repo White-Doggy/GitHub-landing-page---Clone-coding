@@ -13,7 +13,7 @@ a {
     height: 34px;
     background: #eee linear-gradient(to bottom, #fcfcfc, #eee);
     border-radius: 4px;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     padding: 0px 12px;
     font-size: 14px;
@@ -218,6 +218,19 @@ header .sub-menu li a{
 
 header .sub-menu li a:hover{
     color: #4078c0;
+}
+
+#toggle-btn {
+    display: none;
+
+    background: url("../img/toggle-btn.svg");
+    width: 18px;
+    height: 24px;
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    cursor: pointer;
+    text-indent: -9999px;
 }
 
 
@@ -453,7 +466,6 @@ header .sub-menu li a:hover{
     flex: 1;
     border-left: 1px solid #e5e5e5;
 }
-
 
 
 /* FOOTER */
